@@ -10,9 +10,13 @@
 </head>
 <body>
     <div data-bind="text: msg"></div>
+    <div data-bind="foreach: likes">
+        <div data-bind="text: $data"></div>
+    </div>
     <script>
         ko.applyBindings({
-            msg: 'hello world'
+            msg: 'hello world',
+            likes: ['唱歌', '写字', '跳舞']
         })
     </script>
 </body>
